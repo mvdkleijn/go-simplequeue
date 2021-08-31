@@ -1,5 +1,7 @@
 # go-simplequeue
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b82db1a4bee14f84bfeaf858e5907f5c)](https://app.codacy.com/gh/mvdkleijn/go-simplequeue?utm_source=github.com&utm_medium=referral&utm_content=mvdkleijn/go-simplequeue&utm_campaign=Badge_Grade_Settings)
+
 Simple locking queue system with workers.
 
 ## Usage
