@@ -1,0 +1,51 @@
+package main
+
+import (
+	"context"
+	"log"
+	"os"
+	"runtime/trace"
+)
+
+// test func
+func createJobs(number int) []*Job {
+	jobs := make([]*Job, 0)
+
+	for i := 0; i < number; i++ {
+		jobs = append(jobs, &Job{Id: i})
+	}
+
+	return jobs
+}
+
+// test func
+func Run(ctx context.Context) {
+	numWorkers := 15
+	// Initialize the queue with the people and also the counters
+	q := CreateQueue(ctx)
+	workers := InitializeWorkers(ctx, numWorkers)
+
+	ProcessQueue(ctx, q, workers)
+	// output(fmt.Sprintf("Run Supermarket with: %d Go routines, WaitGroup and Mutex", numWorkers), workers)
+}
+
+// test func
+func main() {
+	f, err := os.Create("trace.out")
+	if err != nil {
+		log.Fatalf("failed to create trace output file: %v", err)
+	}
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.Fatalf("failed to close trace file: %v", err)
+		}
+	}()
+
+	if err := trace.Start(f); err != nil {
+		log.Fatalf("failed to start trace: %v", err)
+	}
+	defer trace.Stop()
+
+	ctx := context.Background()
+	Run(ctx)
+}
