@@ -1,6 +1,6 @@
 # go-simplequeue
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b82db1a4bee14f84bfeaf858e5907f5c)](https://app.codacy.com/gh/mvdkleijn/go-simplequeue?utm_source=github.com&utm_medium=referral&utm_content=mvdkleijn/go-simplequeue&utm_campaign=Badge_Grade_Settings)
+[![Codacy grade](https://img.shields.io/codacy/grade/b82db1a4bee14f84bfeaf858e5907f5c?style=for-the-badge)](https://app.codacy.com/gh/mvdkleijn/go-simplequeue) [![Go Report Card](https://goreportcard.com/badge/github.com/mvdkleijn/go-simplequeue?style=for-the-badge)](https://goreportcard.com/report/github.com/mvdkleijn/go-simplequeue)
 
 Simple locking queue system with workers.
 
