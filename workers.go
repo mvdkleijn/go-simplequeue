@@ -6,12 +6,14 @@ import (
 	"runtime/trace"
 )
 
+// WorkerI is intended for possible future expansion
 type WorkerI interface {
 	ID() int64
 	Handled() int64
 	Process(job Job)
 }
 
+// Worker is the implementation of a single worker
 type Worker struct {
 	id          int64
 	jobsHandled int64
@@ -33,7 +35,7 @@ func (w *Worker) process(ctx context.Context, job Job) {
 	trace.Log(ctx, "process", fmt.Sprintf("worker %v finished Job %v.", w.ID(), job.ID()))
 }
 
-// Initialize and return a pool of workers
+// InitializeWorkers initializes and returns a pool of workers
 func InitializeWorkers(ctx context.Context, num int) []*Worker {
 	_, task := trace.NewTask(ctx, "initialize workers")
 	workers := make([]*Worker, 0)

@@ -7,6 +7,7 @@ import (
 	"sync"
 )
 
+// QueueI is intended for possible future expansion
 type QueueI interface {
 	Pop() *Job                                   // Remove a job from the queue and return it
 	Push(job *Job)                               // Add a job onto the queue
@@ -14,12 +15,13 @@ type QueueI interface {
 	Process(ctx context.Context, pool []*Worker) // Process the queue with a pool of workers
 }
 
+// Queue is set of Jobs that can be worked on by one or more Workers
 type Queue struct {
 	jobs []*Job
 	Lock *sync.Mutex
 }
 
-// Remove a job from the queue and return it
+// Pop a job off of the queue and return it
 func (q *Queue) Pop() *Job {
 	if len(q.jobs) > 0 {
 		job := q.jobs[0]
@@ -31,12 +33,12 @@ func (q *Queue) Pop() *Job {
 	return nil
 }
 
-// Add a job onto the queue
+// Push a job onto the queue
 func (q *Queue) Push(job Job) {
 	q.jobs = append(q.jobs, &job)
 }
 
-// Returns the number of jobs on the queue
+// Jobs returns the number of jobs on the queue
 func (q *Queue) Jobs() int {
 	return len(q.jobs)
 }
@@ -78,7 +80,7 @@ func process(ctx context.Context, q *Queue, w *Worker, wg *sync.WaitGroup) {
 	}
 }
 
-// Create a queue
+// CreateQueue initializes and returns an empty queue
 func CreateQueue(ctx context.Context) *Queue {
 	_, task := trace.NewTask(ctx, "initialize queue")
 	q := &Queue{}
