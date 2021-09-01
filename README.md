@@ -4,6 +4,8 @@
 
 Simple locking queue system with workers.
 
+Also see: <https://pkg.go.dev/github.com/mvdkleijn/go-simplequeue>
+
 ## Usage
 
 ```golang
