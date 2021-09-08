@@ -32,4 +32,6 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          force-coverage-parser: go
+          language: go
           coverage-reports: coverage.txt
