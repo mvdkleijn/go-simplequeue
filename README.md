@@ -91,4 +91,5 @@ func main() {
 
 # Licensing
 
-Go-simplequeue is licensed under GPLv3. The full details are available from the [LICENSE](/LICENSE) file.
+Go-simplequeue is made available under the [MPL-2.0](https://choosealicense.com/licenses/mpl-2.0/)
+license. The full details are available from the [LICENSE](/LICENSE) file.
