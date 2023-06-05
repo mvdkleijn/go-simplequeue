@@ -28,14 +28,10 @@ jobs:
       - name: Test
         run: go test -v -coverprofile=./coverage.out ./...
         
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: ./coverage.out
-        
       - name: Codacy Coverage Reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ./coverage.out
+          language: go
+          force-coverage-parser: go
