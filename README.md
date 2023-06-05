@@ -11,7 +11,14 @@ Simple locking queue system with workers.
 
 Also see: <https://pkg.go.dev/github.com/mvdkleijn/go-simplequeue>
 
-## Usage
+## Support
+
+- Go versions, see: https://endoflife.date/go
+
+Source code and issues: https://github.com/mvdkleijn/go-simplequeue
+
+
+## Usage / Example
 
 ```golang
 // Define a job that conforms to the simplequeue.Job interface
@@ -81,3 +88,7 @@ func main() {
     fmt.Printf("Total workers: %d\n", len(workers))
 }
 ```
+
+# Licensing
+
+Go-simplequeue is licensed under GPLv3. The full details are available from the [LICENSE](/LICENSE) file.
