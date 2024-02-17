@@ -1,6 +1,6 @@
-module github.com/mvdkleijn/go-simplequeue
+module code.vanderkleijn.net/go-simplequeue/v1
 
-go 1.21
+go 1.22
 
 require github.com/stretchr/testify v1.8.4
 
