@@ -6,7 +6,7 @@
 
 Simple locking queue system with workers.
 
-Also see: <https://pkg.go.dev/code.vanderkleijn.net/go-simplequeue/v1>
+Also see: <https://pkg.go.dev/code.vanderkleijn.net/go-simplequeue>
 
 ## Support
 
