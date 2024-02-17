@@ -1,4 +1,4 @@
-module code.vanderkleijn.net/go-simplequeue/v1
+module code.vanderkleijn.net/go-simplequeue
 
 go 1.22.0
 
