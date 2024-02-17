@@ -1,6 +1,6 @@
 module code.vanderkleijn.net/go-simplequeue/v1
 
-go 1.22
+go 1.22.0
 
 require github.com/stretchr/testify v1.8.4
 
