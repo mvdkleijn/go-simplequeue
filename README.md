@@ -1,7 +1,7 @@
 # go-simplequeue
 
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/mvdkleijn/go-simplequeue?style=for-the-badge)
-[![Codacy grade](https://img.shields.io/codacy/grade/b82db1a4bee14f84bfeaf858e5907f5c?style=for-the-badge)](https://app.codacy.com/gh/mvdkleijn/go-simplequeue)
+[![Codacy grade](https://img.shields.io/codacy/grade/3d4c22c400ea474c8fb69b4c9564484c?style=for-the-badge)](https://app.codacy.com/gh/mvdkleijn/go-simplequeue)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mvdkleijn/go-simplequeue?style=for-the-badge)](https://goreportcard.com/report/github.com/mvdkleijn/go-simplequeue) [![Liberapay patrons](https://img.shields.io/liberapay/patrons/mvdkleijn?style=for-the-badge)](https://liberapay.com/mvdkleijn/) [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O7H6C73)
 
 Simple locking queue system with workers.
