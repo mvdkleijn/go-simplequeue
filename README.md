@@ -1,3 +1,5 @@
+# MIGRATED TO opencommit.eu/mvdkleijn/go-simplequeue
+
 # go-simplequeue
 
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/mvdkleijn/go-simplequeue?style=for-the-badge)
